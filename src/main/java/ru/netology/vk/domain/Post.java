@@ -33,6 +33,25 @@ public class Post {
     private ViewsInfo viewsInfo;
     /* Информация о местоположении */
     private Geo geo;
+    /* Id автора, если запись была опубликована от имени сообщества и подписана пользователем */
+    private int signerId;
+    /* может ли текущий пользователь закрепить запись */
+    private int canPin;
+    /* Может ли текущий пользователь удалить запись  */
+    private int canDelete;
+    /* Может ли текущий пользователь редактировать запись */
+    private int canEdit;
+    /* Запись закреплена. */
+    private int isPinned;
+    /* Содержит ли запись отметку "реклама" */
+    private int markedAsAds;
+    /* Объект добавлен в закладки у текущего пользователя */
+    private boolean isFavorite;
+    /* Id отложенной записи. Это поле возвращается тогда, когда запись стояла на таймере.  */
+    private int postponedId;
+    /* Информация о записи VK Donut */
+    private Donut donut;
+
 
     public int getId() {
         return id;
@@ -152,5 +171,81 @@ public class Post {
 
     public void setGeo(Geo geo) {
         this.geo = geo;
+    }
+
+    public boolean isFriendsOnly() {
+        return friendsOnly;
+    }
+
+    public int getSignerId() {
+        return signerId;
+    }
+
+    public void setSignerId(int signerId) {
+        this.signerId = signerId;
+    }
+
+    public int getCanPin() {
+        return canPin;
+    }
+
+    public void setCanPin(int canPin) {
+        this.canPin = canPin;
+    }
+
+    public int getCanDelete() {
+        return canDelete;
+    }
+
+    public void setCanDelete(int canDelete) {
+        this.canDelete = canDelete;
+    }
+
+    public int getCanEdit() {
+        return canEdit;
+    }
+
+    public void setCanEdit(int canEdit) {
+        this.canEdit = canEdit;
+    }
+
+    public int getIsPinned() {
+        return isPinned;
+    }
+
+    public void setIsPinned(int isPinned) {
+        this.isPinned = isPinned;
+    }
+
+    public int getMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public void setMarkedAsAds(int markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
+
+    public boolean isFavorite() {
+        return isFavorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        isFavorite = favorite;
+    }
+
+    public int getPostponedId() {
+        return postponedId;
+    }
+
+    public void setPostponedId(int postponedId) {
+        this.postponedId = postponedId;
+    }
+
+    public Donut getDonut() {
+        return donut;
+    }
+
+    public void setDonut(Donut donut) {
+        this.donut = donut;
     }
 }
